@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Streamish.Models;
 
 namespace Streamish.Repositories
@@ -10,6 +11,8 @@ namespace Streamish.Repositories
         List<Video> GetAll();
         Video GetById(int id);
         void Update(Video video);
-        void GetAllWithComments();
+        List<Video> GetAllWithComments();
+        List<Video> Search(string criterion, bool sortDescending);
+        List<Video> GetVideoByDate(DateTime date);
     }
 }
